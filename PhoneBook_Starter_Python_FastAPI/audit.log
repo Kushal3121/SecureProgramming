@@ -1,0 +1,21 @@
+2025-11-19 22:19:10 - INFO - action=LIST user=reader detail=count=0
+2025-11-19 22:19:23 - INFO - action=LIST user=reader detail=count=0
+2025-11-19 22:19:24 - INFO - action=LIST user=reader detail=count=0
+2025-11-19 22:19:38 - INFO - action=LIST user=reader detail=count=0
+2025-11-19 22:21:46 - INFO - action=AUTH_FAIL user=reader detail=bad_password
+2025-11-19 22:22:07 - INFO - action=LIST user=admin detail=count=0
+2025-11-19 22:50:05 - INFO - action=LIST user=reader detail=count=0
+2025-11-19 22:50:14 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=123-1234
+2025-11-19 22:50:46 - INFO - action=LIST user=reader detail=count=1
+2025-11-19 22:52:05 - INFO - action=LIST user=reader detail=count=1
+2025-11-19 22:54:48 - INFO - action=LIST user=reader detail=count=1
+2025-11-19 22:55:30 - INFO - action=DELETE_BY_NAME user=admin detail=name=Bruce Schneier
+2025-11-19 22:55:35 - INFO - action=LIST user=reader detail=count=0
+2025-11-19 22:56:35 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=123-1234
+2025-11-19 22:56:58 - INFO - action=DELETE_BY_NAME user=admin detail=name=Bruce Schneier
+2025-11-19 22:57:02 - INFO - action=LIST user=reader detail=count=0
+2025-11-19 22:57:09 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=123-1234
+2025-11-19 22:57:13 - INFO - action=DELETE_BY_NUMBER user=admin detail=number=123-1234
+2025-11-19 22:59:57 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=123-1234
+2025-11-19 23:00:01 - INFO - action=DELETE_BY_NUMBER user=admin detail=number=123-1234
+2025-11-19 23:00:05 - INFO - action=LIST user=reader detail=count=0
