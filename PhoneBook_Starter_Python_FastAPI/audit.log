@@ -19,3 +19,25 @@
 2025-11-19 22:59:57 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=123-1234
 2025-11-19 23:00:01 - INFO - action=DELETE_BY_NUMBER user=admin detail=number=123-1234
 2025-11-19 23:00:05 - INFO - action=LIST user=reader detail=count=0
+2025-11-19 23:06:21 - INFO - action=LIST user=reader detail=count=0
+2025-11-19 23:06:27 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=123-1234
+2025-11-19 23:06:32 - INFO - action=LIST user=reader detail=count=1
+2025-11-19 23:06:38 - INFO - action=DELETE_BY_NAME user=admin detail=name=Bruce Schneier
+2025-11-19 23:11:54 - INFO - action=AUTH_FAIL user=reader detail=bad_password
+2025-11-19 23:11:54 - INFO - action=AUTH_FAIL user=anonymous detail=unknown_user=abc
+2025-11-19 23:11:54 - INFO - action=AUTHZ_FAIL user=reader detail=required=readwrite
+2025-11-19 23:11:54 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=12345
+2025-11-19 23:11:54 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=123-1234
+2025-11-19 23:11:54 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=(703)111-2121
+2025-11-19 23:11:54 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=+1(703)111-2121
+2025-11-19 23:11:54 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=+32 (21) 212-2324
+2025-11-19 23:11:54 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=1(703)123-1234
+2025-11-19 23:11:54 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=011 701 111 1234
+2025-11-19 23:11:54 - INFO - action=ADD user=admin detail=name=Bruce Schneier, phone=12345.12345
+2025-11-19 23:11:54 - INFO - action=DELETE_BY_NAME_NOT_FOUND user=admin detail=name=NameDoesNotExist
+2025-11-19 23:11:54 - INFO - action=DELETE_BY_NUMBER_NOT_FOUND user=admin detail=number=999-9999
+2025-11-19 23:14:23 - INFO - action=AUTH_FAIL user=reader detail=bad_password
+2025-11-19 23:14:23 - INFO - action=AUTH_FAIL user=anonymous detail=unknown_user=abc
+2025-11-19 23:14:23 - INFO - action=AUTHZ_FAIL user=reader detail=required=readwrite
+2025-11-19 23:14:23 - INFO - action=DELETE_BY_NAME_NOT_FOUND user=admin detail=name=NameDoesNotExist
+2025-11-19 23:14:23 - INFO - action=DELETE_BY_NUMBER_NOT_FOUND user=admin detail=number=999-9999

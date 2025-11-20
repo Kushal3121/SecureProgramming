@@ -5,7 +5,7 @@ import secrets
 
 from fastapi import Depends, FastAPI, HTTPException, status
 from fastapi.security import HTTPBasic, HTTPBasicCredentials
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field, field_validator
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -253,22 +253,31 @@ class PhoneBookEntry(BaseModel):
     name: str
     phoneNumber: str = Field(..., alias="phone_number")
 
-    @validator("name")
+    @field_validator("name")
+    @classmethod
     def validate_name(cls, v: str) -> str:
         if not is_valid_name(v):
-            raise ValueError("Invalid name format")
+            raise HTTPException(
+                status_code=400,
+                detail="Invalid name format"
+            )
         return v
 
-    @validator("phoneNumber")
+    @field_validator("phoneNumber")
+    @classmethod
     def validate_phone(cls, v: str) -> str:
         if not is_valid_phone(v):
-            raise ValueError("Invalid phone number format")
+            raise HTTPException(
+                status_code=400,
+                detail="Invalid phone number format"
+            )
         return v
 
     model_config = {
         "from_attributes": True,
-        "populate_by_name": True  # <-- IMPORTANT for accepting "phoneNumber"
+        "populate_by_name": True
     }
+
 
 
 # Dependency: DB session
